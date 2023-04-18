@@ -1,0 +1,8 @@
+use("platzi_store")
+
+db.inventory.updateOne({_id: 4},{
+
+  $push: {      //agregar un documento al final - solo para arrays
+    tags: "keyboard"
+  }
+})

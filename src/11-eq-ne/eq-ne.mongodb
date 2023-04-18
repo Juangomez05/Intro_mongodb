@@ -1,0 +1,17 @@
+use("platzi_store")
+
+// busque los elementos que sean igual
+// usando $eq
+
+// db.inventory.find({ qty: 20})  //implicita
+
+// db.inventory.find({ qty: { $eq: 20}}) //explicita
+
+
+db.inventory.find({ "item.code": "123" })
+
+
+// no busque los elementos que sean igual
+// usando $ne
+
+db.inventory.find({ qty: { $ne: 20}})

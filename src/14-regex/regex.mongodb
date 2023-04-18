@@ -1,0 +1,23 @@
+use("platzi_store")
+
+
+//db.inventory.find({ "item.description": "Single line description." })
+
+//db.inventory.find({ "item.description": {$regex: /line/ } }) //obtiene una busqueda con base a un texto
+
+// db.inventory.find({ "item.description": {$regex: /LINE/i } })
+// //agregando la i significa que no importa si esta en mayusculas o minusculas
+
+
+// db.inventory.find({ "item.description": {$regex: /LINE$/i } })
+// //que finalicen en: esa parte del texto
+
+// db.inventory.find({ "item.description": {$regex: /^single/i } })
+// //que inicie en: esa parte del texto
+
+
+//db.inventory.find({ "item.description": {$regex: /^s/im } })
+//para que busque en los saltos de linea
+
+db.inventory.find({"item.description": /^s/im})
+//no hay necesidad de usar el regex

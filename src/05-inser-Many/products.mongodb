@@ -1,0 +1,22 @@
+use("platzi_store")
+
+db.products.drop() //borra todas los documentos que tenga la coleccion
+
+db.products.insertMany([  //crea varios documentos en masa
+  {
+    name: "product 1",
+    price: 100
+  },
+  {
+    name: "product 2",
+    price: 1000
+  },
+  {
+    name: "product 3",
+    price: 10000
+  }
+],  {
+  ordered: false // si hay documentos con duplicidad, solo deje estos documentos fuera y que continue con la inserción de datos.
+})
+
+db.products.find()
